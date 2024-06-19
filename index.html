@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduation Attendance Ceremony</title>
+    <style>
+		.container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh; /* Full viewport height */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+         th, td {
+            border: 2px solid #dddddd;
+            text-align: left;
+            padding: 7px;
+			
+        }
+        th {
+            background-color: #0c86cc;<br>
+
+        }
+		
+		 
+        .filter-input, .filter-select {
+            width: 40%;
+            padding: 10px;
+            margin: 20px auto;
+            display: block;
+            font-size: 16px;
+        }
+    body h2 {
+}
+    </style>
+	
+</head>
+
+<body>
+
+
+    
+   
+<div class="container">
+        <img src="logo.png" width="220" height="100" alt="Logo"/>
+    </div>
+<h2 style="text-align: center;">Graduation  Ceremony&nbsp;Attendance</h2>
+	
+   
+<table id="studentTable">
+		
+		  <thead>
+            <tr>
+                <th><input type="text" id="nameSearchInput" class="filter-input" onkeyup="filterTable()" placeholder="Search for student names.."></th>
+                <th> <select id="classSearchSelect" class="filter-select" onchange="filterTable()">
+        <option width="150" value="">Select class..</option>
+    </select></th>
+	
+            </tr>
+        </thead>
+		
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Class</th>
+                <th>Guest 1</th>
+                <th>Guest 2</th>
+                <th>Guest 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Abdulla Ahmed Sulaif Eissa Aamer</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended1"></td>
+                <td><input type="checkbox" name="rsvp1"></td>
+                <td><input type="checkbox" name="collected1"></td>
+            </tr>
+            <tr>
+                <td>Ahmed Abdalla Rashid Al Mulla</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended2"></td>
+                <td><input type="checkbox" name="rsvp2"></td>
+                <td><input type="checkbox" name="collected2"></td>
+            </tr>
+            <tr>
+                <td>Ali Ghazi Ali Bn Saber</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended3"></td>
+                <td><input type="checkbox" name="rsvp3"></td>
+                <td><input type="checkbox" name="collected3"></td>
+            </tr>
+            <tr>
+                <td>Hamad Hashem Hassan Ali Aldhuhoori</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended4"></td>
+                <td><input type="checkbox" name="rsvp4"></td>
+                <td><input type="checkbox" name="collected4"></td>
+            </tr>
+            <tr>
+                <td>Humaid Nasser Saber Hassan Alraeesi</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended5"></td>
+                <td><input type="checkbox" name="rsvp5"></td>
+                <td><input type="checkbox" name="collected5"></td>
+            </tr>
+            <tr>
+                <td>Khalid Hussain Khairalla Askar Alaskar</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended6"></td>
+                <td><input type="checkbox" name="rsvp6"></td>
+                <td><input type="checkbox" name="collected6"></td>
+            </tr>
+            <tr>
+                <td>Mohamed Faisal Fadil Alhamer Alali</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended7"></td>
+                <td><input type="checkbox" name="rsvp7"></td>
+                <td><input type="checkbox" name="collected7"></td>
+            </tr>
+            <tr>
+                <td>Mohamed Jaber Humaid Sultan Alali</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended8"></td>
+                <td><input type="checkbox" name="rsvp8"></td>
+                <td><input type="checkbox" name="collected8"></td>
+            </tr>
+            <tr>
+                <td>Mohammad Abdullah Mohammed Alkhubi Alshehhi</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended9"></td>
+                <td><input type="checkbox" name="rsvp9"></td>
+                <td><input type="checkbox" name="collected9"></td>
+            </tr>
+            <tr>
+                <td>Mohammed Adel Abdulla Hamad Alseqetri</td>
+               <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended10"></td>
+                <td><input type="checkbox" name="rsvp10"></td>
+                <td><input type="checkbox" name="collected10"></td>
+            </tr>
+            <tr>
+                <td>Mohammed Hussain Qamber Ahmed</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended11"></td>
+                <td><input type="checkbox" name="rsvp11"></td>
+                <td><input type="checkbox" name="collected11"></td>
+            </tr>
+            <tr>
+                <td>Nasser Tatal Hashem Alhooti Alblooshi</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended12"></td>
+                <td><input type="checkbox" name="rsvp12"></td>
+                <td><input type="checkbox" name="collected12"></td>
+            </tr>
+            <tr>
+                <td>Omar Abdulghafoor Mohamed Saeed Mohamed AlAli</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended13"></td>
+                <td><input type="checkbox" name="rsvp13"></td>
+                <td><input type="checkbox" name="collected13"></td>
+            </tr>
+            <tr>
+                <td>Rashed Sultan Ali Madhoosh Alshamsi</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended14"></td>
+                <td><input type="checkbox" name="rsvp14"></td>
+                <td><input type="checkbox" name="collected14"></td>
+            </tr>
+            <tr>
+                <td>Rashid Hussain Rashid Alafad Al Ali</td>
+               <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended15"></td>
+                <td><input type="checkbox" name="rsvp15"></td>
+                <td><input type="checkbox" name="collected15"></td>
+            </tr>
+            <tr>
+                <td>Rashid Saeed Tayeb Alabdool Alawadhi</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended16"></td>
+                <td><input type="checkbox" name="rsvp16"></td>
+                <td><input type="checkbox" name="collected16"></td>
+            </tr>
+            <tr>
+                <td>Saif Abdulla Mohammed Hussain Alharmoozi</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended17"></td>
+                <td><input type="checkbox" name="rsvp17"></td>
+                <td><input type="checkbox" name="collected17"></td>
+            </tr>
+            <tr>
+                <td>Salem Abdulla Salem Yahya Almahri</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended18"></td>
+                <td><input type="checkbox" name="rsvp18"></td>
+                <td><input type="checkbox" name="collected18"></td>
+            </tr>
+            <tr>
+                <td>Salim Musabeh Salim Bin Dahi Al Ali</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended19"></td>
+                <td><input type="checkbox" name="rsvp19"></td>
+                <td><input type="checkbox" name="collected19"></td>
+            </tr>
+            <tr>
+                <td>Suad Hussain Ahmad Mohamed Ameen Alharmoodi</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended20"></td>
+                <td><input type="checkbox" name="rsvp20"></td>
+                <td><input type="checkbox" name="collected20"></td>
+            </tr>
+            <tr>
+                <td>Sulaiman Waleed Sulaiman Mohammed Alshehhi</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended21"></td>
+                <td><input type="checkbox" name="rsvp21"></td>
+                <td><input type="checkbox" name="collected21"></td>
+            </tr>
+            <tr>
+                <td>Sultan Mohammed Ali Abdulrahman Hashem</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended22"></td>
+                <td><input type="checkbox" name="rsvp22"></td>
+                <td><input type="checkbox" name="collected22"></td>
+            </tr>
+            <tr>
+                <td>Sultan Yousef Esmail Abdulrahim Alzarooni</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended23"></td>
+                <td><input type="checkbox" name="rsvp23"></td>
+                <td><input type="checkbox" name="collected23"></td>
+            </tr>
+            <tr>
+                <td>Tariq Hussain Ibrahim Eisa Aljasmi</td>
+                <td>A12[ENI]/1</td>
+                <td><input type="checkbox" name="attended24"></td>
+                <td><input type="checkbox" name="rsvp24"></td>
+                <td><input type="checkbox" name="collected24"></td>
+            </tr>
+            <tr>
+                <td>Abdulla Abdulaziz Mohamed Kareem Bahadur Alblooshi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended25"></td>
+                <td><input type="checkbox" name="rsvp25"></td>
+                <td><input type="checkbox" name="collected25"></td>
+            </tr>
+            <tr>
+                <td>Abdullah Khamis Khalfan Alqaydi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended26"></td>
+                <td><input type="checkbox" name="rsvp26"></td>
+                <td><input type="checkbox" name="collected26"></td>
+            </tr>
+            <tr>
+                <td>Abdullah Mohammed Hassan Ali Aldhuhoori</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended27"></td>
+                <td><input type="checkbox" name="rsvp27"></td>
+                <td><input type="checkbox" name="collected27"></td>
+            </tr>
+            <tr>
+                <td>Ahmed Abdelaziz Ahmed Alhaway Alzarooni</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended28"></td>
+                <td><input type="checkbox" name="rsvp28"></td>
+                <td><input type="checkbox" name="collected28"></td>
+            </tr>
+            <tr>
+                <td>Ahmed Saleh Ahmed Alshehi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended29"></td>
+                <td><input type="checkbox" name="rsvp29"></td>
+                <td><input type="checkbox" name="collected29"></td>
+            </tr>
+            <tr>
+                <td>Ali Hassan Rashid Asad Almulla</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended30"></td>
+                <td><input type="checkbox" name="rsvp30"></td>
+                <td><input type="checkbox" name="collected30"></td>
+            </tr>
+            <tr>
+                <td>Ali Saeed Hamad Bukhamis Alketbi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended31"></td>
+                <td><input type="checkbox" name="rsvp31"></td>
+                <td><input type="checkbox" name="collected31"></td>
+            </tr>
+            <tr>
+                <td>Amar Adnan Haider Balaj Ahmed</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended32"></td>
+                <td><input type="checkbox" name="rsvp32"></td>
+                <td><input type="checkbox" name="collected32"></td>
+            </tr>
+            <tr>
+                <td>Ebrahim Marwan Mohamed Ahmed Nusairi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended33"></td>
+                <td><input type="checkbox" name="rsvp33"></td>
+                <td><input type="checkbox" name="collected33"></td>
+            </tr>
+            <tr>
+                <td>Hamdan Nasser Haider Ahmed</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended34"></td>
+                <td><input type="checkbox" name="rsvp34"></td>
+                <td><input type="checkbox" name="collected34"></td>
+            </tr>
+            <tr>
+                <td>Hamed Khalil Ibrahim Ismaeil Alraeesi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended35"></td>
+                <td><input type="checkbox" name="rsvp35"></td>
+                <td><input type="checkbox" name="collected35"></td>
+            </tr>
+            <tr>
+                <td>Hazza Mohamed Rashid Abdelsalam Almaeeni</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended36"></td>
+                <td><input type="checkbox" name="rsvp36"></td>
+                <td><input type="checkbox" name="collected36"></td>
+            </tr>
+            <tr>
+                <td>Humaid Obaid Himaid Alkharsi Alaleeli</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended37"></td>
+                <td><input type="checkbox" name="rsvp37"></td>
+                <td><input type="checkbox" name="collected37"></td>
+            </tr>
+            <tr>
+                <td>Humaid Abdulla Khair Mohammed Alblooshi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended38"></td>
+                <td><input type="checkbox" name="rsvp38"></td>
+                <td><input type="checkbox" name="collected38"></td>
+            </tr>
+            <tr>
+                <td>Kahlifa Khalil Mahmood Hassan Abdulla</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended39"></td>
+                <td><input type="checkbox" name="rsvp39"></td>
+                <td><input type="checkbox" name="collected39"></td>
+            </tr>
+            <tr>
+                <td>Khalifa Saeed Hamad Musabeh Almusafri</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended40"></td>
+                <td><input type="checkbox" name="rsvp40"></td>
+                <td><input type="checkbox" name="collected40"></td>
+            </tr>
+            <tr>
+                <td>Khalid Elyas Askar Ismall Al Askar</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended41"></td>
+                <td><input type="checkbox" name="rsvp41"></td>
+                <td><input type="checkbox" name="collected41"></td>
+            </tr>
+            <tr>
+                <td>Khalifa Mansoor Mohamed Waldaltawila Alsuwaidi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended42"></td>
+                <td><input type="checkbox" name="rsvp42"></td>
+                <td><input type="checkbox" name="collected42"></td>
+            </tr>
+            <tr>
+                <td>Marwan Ahmad Mohammad Musallam Dahir</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended43"></td>
+                <td><input type="checkbox" name="rsvp43"></td>
+                <td><input type="checkbox" name="collected43"></td>
+            </tr>
+            <tr>
+                <td>Mayed Ali Mohamed Ali Alhosani</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended44"></td>
+                <td><input type="checkbox" name="rsvp44"></td>
+                <td><input type="checkbox" name="collected44"></td>
+            </tr>
+            <tr>
+                <td>Mohammed Ibrahim Mahmood Alawadhi</td>
+               <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended45"></td>
+                <td><input type="checkbox" name="rsvp45"></td>
+                <td><input type="checkbox" name="collected45"></td>
+            </tr>
+            <tr>
+                <td>Mohammed Nasser Mohammed Sulaiman Alblalooshi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended46"></td>
+                <td><input type="checkbox" name="rsvp46"></td>
+                <td><input type="checkbox" name="collected46"></td>
+            </tr>
+            <tr>
+                <td>Mohammed Ahmed Ramadhan Ahmed Almarzooqi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended47"></td>
+                <td><input type="checkbox" name="rsvp47"></td>
+                <td><input type="checkbox" name="collected47"></td>
+            </tr>
+            <tr>
+                <td>Rashed Eissa Hassan Alattar Alawadhi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended48"></td>
+                <td><input type="checkbox" name="rsvp48"></td>
+                <td><input type="checkbox" name="collected48"></td>
+            </tr>
+            <tr>
+                <td>Rashed Mohammed Murad Alhouti Alblooshi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended49"></td>
+                <td><input type="checkbox" name="rsvp49"></td>
+                <td><input type="checkbox" name="collected49"></td>
+            </tr>
+            <tr>
+                <td>Rashid Hamad Salem Alkaabi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended50"></td>
+                <td><input type="checkbox" name="rsvp50"></td>
+                <td><input type="checkbox" name="collected50"></td>
+            </tr>
+            <tr>
+                <td>Rashid Ibrahim Hassan Rashid Aljarwan</td>
+               <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended51"></td>
+                <td><input type="checkbox" name="rsvp51"></td>
+                <td><input type="checkbox" name="collected51"></td>
+            </tr>
+            <tr>
+                <td>Sehail Muhammad Ali Alblooshi</td>
+               <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended52"></td>
+                <td><input type="checkbox" name="rsvp52"></td>
+                <td><input type="checkbox" name="collected52"></td>
+            </tr>
+            <tr>
+                <td>Zayed Faisal Mohammed Shafeej Alqaydi</td>
+                <td>A12[CAI]/1</td>
+                <td><input type="checkbox" name="attended53"></td>
+                <td><input type="checkbox" name="rsvp53"></td>
+                <td><input type="checkbox" name="collected53"></td>
+            </tr>
+            <tr>
+                <td>Abdalla Ali Ibrahim Alhammadi</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended54"></td>
+                <td><input type="checkbox" name="rsvp54"></td>
+                <td><input type="checkbox" name="collected54"></td>
+            </tr>
+            <tr>
+                <td>Abdulaziz Aman Abdulaziz Mohammed Alzarooni</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended55"></td>
+                <td><input type="checkbox" name="rsvp55"></td>
+                <td><input type="checkbox" name="collected55"></td>
+            </tr>
+            <tr>
+                <td>Abdulaziz Mansoor Nooh Khamis Almahri</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended56"></td>
+                <td><input type="checkbox" name="rsvp56"></td>
+                <td><input type="checkbox" name="collected56"></td>
+            </tr>
+            <tr>
+                <td>Abdulkareem Waleed Abdulkareem Alsaeedi</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended57"></td>
+                <td><input type="checkbox" name="rsvp57"></td>
+                <td><input type="checkbox" name="collected57"></td>
+            </tr>
+            <tr>
+                <td>Abdulla Nasser Saif Majed Almatrooshi</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended58"></td>
+                <td><input type="checkbox" name="rsvp58"></td>
+                <td><input type="checkbox" name="collected58"></td>
+            </tr>
+            <tr>
+                <td>Dhaen Khaled Mohammed Ismaeil Alraeesi</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended59"></td>
+                <td><input type="checkbox" name="rsvp59"></td>
+                <td><input type="checkbox" name="collected59"></td>
+            </tr>
+            <tr>
+                <td>Emran Saleh Mohammed Almukhaini</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended60"></td>
+                <td><input type="checkbox" name="rsvp60"></td>
+                <td><input type="checkbox" name="collected60"></td>
+            </tr>
+            <tr>
+                <td>Faisal Ali Mohammed Alhooti Alblooshi</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended61"></td>
+                <td><input type="checkbox" name="rsvp61"></td>
+                <td><input type="checkbox" name="collected61"></td>
+            </tr>
+            <tr>
+                <td>Hassan Abdulla Hassan Mohammed Alhouli</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended62"></td>
+                <td><input type="checkbox" name="rsvp62"></td>
+                <td><input type="checkbox" name="collected62"></td>
+            </tr>
+            <tr>
+                <td>Humaid Ali Obaid bin Ghanim Alaleeli</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended63"></td>
+                <td><input type="checkbox" name="rsvp63"></td>
+                <td><input type="checkbox" name="collected63"></td>
+            </tr>
+            <tr>
+                <td>Mayed Ali Essa Ali Mayed</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended64"></td>
+                <td><input type="checkbox" name="rsvp64"></td>
+                <td><input type="checkbox" name="collected64"></td>
+            </tr>
+            <tr>
+                <td>Mohamed Ismaeil Ibrahim Ahmed Alblooshi</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended65"></td>
+                <td><input type="checkbox" name="rsvp65"></td>
+                <td><input type="checkbox" name="collected65"></td>
+            </tr>
+            <tr>
+                <td>Mohamed Mishal Mohamed Abdalla Al Hammadi</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended66"></td>
+                <td><input type="checkbox" name="rsvp66"></td>
+                <td><input type="checkbox" name="collected66"></td>
+            </tr>
+            <tr>
+                <td>Mohammed Abdalla Mohamed Saeed Aldarmaki</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended67"></td>
+                <td><input type="checkbox" name="rsvp67"></td>
+                <td><input type="checkbox" name="collected67"></td>
+            </tr>
+            <tr>
+                <td>Obaid Sultan Obaid Alshaya Al Ali</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended68"></td>
+                <td><input type="checkbox" name="rsvp68"></td>
+                <td><input type="checkbox" name="collected68"></td>
+            </tr>
+            <tr>
+                <td>Saif Hashem Hassan Ali Aldhuhoori</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended69"></td>
+                <td><input type="checkbox" name="rsvp69"></td>
+                <td><input type="checkbox" name="collected69"></td>
+            </tr>
+            <tr>
+                <td>Saif Mohammed Saif Muftah Alshamsi</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended70"></td>
+                <td><input type="checkbox" name="rsvp70"></td>
+                <td><input type="checkbox" name="collected70"></td>
+            </tr>
+            <tr>
+                <td>Sultan Ali Mohammed Alhooti Alblooshi</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended71"></td>
+                <td><input type="checkbox" name="rsvp71"></td>
+                <td><input type="checkbox" name="collected71"></td>
+            </tr>
+            <tr>
+                <td>Talal Rashed  Mohammed  Alshaer alawadhi</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended72"></td>
+                <td><input type="checkbox" name="rsvp72"></td>
+                <td><input type="checkbox" name="collected72"></td>
+            </tr>
+            <tr>
+                <td>Thani Salem Humaid Alghais Alshamsi</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended73"></td>
+                <td><input type="checkbox" name="rsvp73"></td>
+                <td><input type="checkbox" name="collected73"></td>
+            </tr>
+            <tr>
+                <td>Zayed Ahmed Mohammed Abdulla Altamimi</td>
+                <td>A12[AET]/1</td>
+                <td><input type="checkbox" name="attended74"></td>
+                <td><input type="checkbox" name="rsvp74"></td>
+                <td><input type="checkbox" name="collected74"></td>
+            </tr>
+            <tr>
+                <td>Abdulla Khaled Obaid Marzooq Alshehhi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended75"></td>
+                <td><input type="checkbox" name="rsvp75"></td>
+                <td><input type="checkbox" name="collected75"></td>
+            </tr>
+            <tr>
+                <td>Abdulrahman Yousef Mohammed Yousef Alharmoodi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended76"></td>
+                <td><input type="checkbox" name="rsvp76"></td>
+                <td><input type="checkbox" name="collected76"></td>
+            </tr>
+            <tr>
+                <td>Abdulwahid Majid Abdulwahid Mohamed Alzarouni</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended77"></td>
+                <td><input type="checkbox" name="rsvp77"></td>
+                <td><input type="checkbox" name="collected77"></td>
+            </tr>
+            <tr>
+                <td>Ahmed Abdulaziz Ahmed Hassan Alraeesi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended78"></td>
+                <td><input type="checkbox" name="rsvp78"></td>
+                <td><input type="checkbox" name="collected78"></td>
+            </tr>
+            <tr>
+                <td>Ahmed Abdulaziz Ali Abdulla Alshuweihi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended79"></td>
+                <td><input type="checkbox" name="rsvp79"></td>
+                <td><input type="checkbox" name="collected79"></td>
+            </tr>
+            <tr>
+                <td>Ali Abdulwahab Ebrahim Albayraq Al Ali</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended80"></td>
+                <td><input type="checkbox" name="rsvp80"></td>
+                <td><input type="checkbox" name="collected80"></td>
+            </tr>
+            <tr>
+                <td>Ali Essa A Almahri</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended81"></td>
+                <td><input type="checkbox" name="rsvp81"></td>
+                <td><input type="checkbox" name="collected81"></td>
+            </tr>
+            <tr>
+                <td>Hamad Abdulla Hamoodi Moosa Almahri</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended82"></td>
+                <td><input type="checkbox" name="rsvp82"></td>
+                <td><input type="checkbox" name="collected82"></td>
+            </tr>
+            <tr>
+                <td>Hamad Majid Ahmed Abdalla Alyassi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended83"></td>
+                <td><input type="checkbox" name="rsvp83"></td>
+                <td><input type="checkbox" name="collected83"></td>
+            </tr>
+            <tr>
+                <td>Hamdan  Mohammad  Jassim Mohammad  Alhosani</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended84"></td>
+                <td><input type="checkbox" name="rsvp84"></td>
+                <td><input type="checkbox" name="collected84"></td>
+            </tr>
+            <tr>
+                <td>Harib Abdulwahed Yar Mohammed Albalooshi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended85"></td>
+                <td><input type="checkbox" name="rsvp85"></td>
+                <td><input type="checkbox" name="collected85"></td>
+            </tr>
+            <tr>
+                <td>Hazzaa  Hamad Khamis Masood  Almahri</td>
+               <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended86"></td>
+                <td><input type="checkbox" name="rsvp86"></td>
+                <td><input type="checkbox" name="collected86"></td>
+            </tr>
+            <tr>
+                <td>Ibraheim Saeed Ibrahim Ali Alshamsi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended87"></td>
+                <td><input type="checkbox" name="rsvp87"></td>
+                <td><input type="checkbox" name="collected87"></td>
+            </tr>
+            <tr>
+                <td>Mohammad Adbulla Yousef Jakki Alkokhardi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended88"></td>
+                <td><input type="checkbox" name="rsvp88"></td>
+                <td><input type="checkbox" name="collected88"></td>
+            </tr>
+            <tr>
+                <td>Mohammed Ali Abdulla Alawaiq Alshehhi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended89"></td>
+                <td><input type="checkbox" name="rsvp89"></td>
+                <td><input type="checkbox" name="collected89"></td>
+            </tr>
+            <tr>
+                <td>Mohammed Rashed Abdulqader Alawadhi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended90"></td>
+                <td><input type="checkbox" name="rsvp90"></td>
+                <td><input type="checkbox" name="collected90"></td>
+            </tr>
+            <tr>
+                <td>Obaid Abduhakim Ali Abdulla Alraeesi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended91"></td>
+                <td><input type="checkbox" name="rsvp91"></td>
+                <td><input type="checkbox" name="collected91"></td>
+            </tr>
+            <tr>
+                <td>Omar Ahmad Abdelrahman Abdalla Alkhemeiri</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended92"></td>
+                <td><input type="checkbox" name="rsvp92"></td>
+                <td><input type="checkbox" name="collected92"></td>
+            </tr>
+            <tr>
+                <td>Rashed  Mohammed Abdulghffar Mohammed Saleh Alawadhi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended93"></td>
+                <td><input type="checkbox" name="rsvp93"></td>
+                <td><input type="checkbox" name="collected93"></td>
+            </tr>
+            <tr>
+                <td>Rashed Manea Khalfan Abdulla Alshamsi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended94"></td>
+                <td><input type="checkbox" name="rsvp94"></td>
+                <td><input type="checkbox" name="collected94"></td>
+            </tr>
+            <tr>
+                <td>Rashid Obaid Jasem Mohammed Alhosani</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended95"></td>
+                <td><input type="checkbox" name="rsvp95"></td>
+                <td><input type="checkbox" name="collected95"></td>
+            </tr>
+            <tr>
+                <td>Saif Husam Nassar</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended96"></td>
+                <td><input type="checkbox" name="rsvp96"></td>
+                <td><input type="checkbox" name="collected96"></td>
+            </tr>
+            <tr>
+                <td>Sultan  Butti  Ahmed  Al nuaimi</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended97"></td>
+                <td><input type="checkbox" name="rsvp97"></td>
+                <td><input type="checkbox" name="collected97"></td>
+            </tr>
+            <tr>
+                <td>Zayed Abdulla Ahmed Ibrahim</td>
+                <td>A12[AMT]/1</td>
+                <td><input type="checkbox" name="attended98"></td>
+                <td><input type="checkbox" name="rsvp98"></td>
+                <td><input type="checkbox" name="collected98"></td>
+				
+            </tr>
+			
+			 <tr><td colspan="5" style="text-align: center;"><button id="saveButton" onclick="saveCheckboxes()">Save</button></td></tr>
+          
+        </tbody>
+    </table>
+
+  
+
+    <script>
+        // Function to populate the class dropdown
+        function populateClassDropdown() {
+            var table, tr, td, i, classSet;
+            table = document.getElementById("studentTable");
+            tr = table.getElementsByTagName("tr");
+            classSet = new Set();
+
+            for (i = 1; i < tr.length; i++) { // Start at 1 to skip header row
+                td = tr[i].getElementsByTagName("td")[1]; // Index 1 for the class column
+                if (td) {
+                    classSet.add(td.textContent || td.innerText);
+                }
+            }
+
+            var classSearchSelect = document.getElementById("classSearchSelect");
+            classSet.forEach(function(className) {
+                var option = document.createElement("option");
+                option.value = className;
+                option.text = className;
+                classSearchSelect.add(option);
+            });
+        }
+
+        // Function to filter student names and classes
+        function filterTable() {
+            var nameInput, classSelect, nameFilter, classFilter, table, tr, tdName, tdClass, i, nameTxtValue, classTxtValue;
+            nameInput = document.getElementById("nameSearchInput");
+            classSelect = document.getElementById("classSearchSelect");
+            nameFilter = nameInput.value.toUpperCase();
+            classFilter = classSelect.value.toUpperCase();
+            table = document.getElementById("studentTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 1; i < tr.length; i++) { // Start at 1 to skip header row
+                tdName = tr[i].getElementsByTagName("td")[0]; // Index 0 for the first column (Student Name)
+                tdClass = tr[i].getElementsByTagName("td")[1]; // Index 1 for the second column (Class)
+                if (tdName && tdClass) {
+                    nameTxtValue = tdName.textContent || tdName.innerText;
+                    classTxtValue = tdClass.textContent || tdClass.innerText;
+                    if ((nameTxtValue.toUpperCase().indexOf(nameFilter) > -1 || nameFilter === "") &&
+                        (classFilter === "" || classTxtValue.toUpperCase() === classFilter)) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }       
+            }
+        }
+
+        // Function to save checkbox states to local storage
+        function saveCheckboxes() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach((checkbox, index) => {
+                localStorage.setItem(`checkbox${index}`, checkbox.checked);
+            });
+            alert("Checkbox states saved!");
+        }
+
+        // Function to load checkbox states from local storage
+        function loadCheckboxes() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach((checkbox, index) => {
+                var checked = localStorage.getItem(`checkbox${index}`) === 'true';
+                checkbox.checked = checked;
+            });
+        }
+
+        // Load checkbox states and populate class dropdown when the page loads
+        window.onload = function() {
+            loadCheckboxes();
+            populateClassDropdown();
+        };
+		
+		
+
+
+</body>
+</html>
